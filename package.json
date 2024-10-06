@@ -14,22 +14,22 @@
   "dependencies": {
     "axios": "^0.21.1",
     "lodash": "^4.17.10",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.14.1",  // Atualizei esta linha para evitar conflitos de versão.
     "prop-types": "^15.7.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^17.0.2",  // Corrigi a versão do React para uma versão compatível.
+    "react-dom": "^17.0.2",  // Garantir que o React e ReactDOM usem a mesma versão.
     "react-loading": "^2.0.3",
     "react-modal": "^3.8.1",
-    "react-redux": "^7.0.3",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "^4.0.0",
-    "react-select": "^3.0.8",
+    "react-redux": "^7.2.4",  // Atualizei para uma versão mais recente.
+    "react-router-dom": "^5.2.0",  // Atualizei para evitar conflitos de dependências.
+    "react-scripts": "4.0.3",  // Atualizado para uma versão mais estável.
+    "react-select": "^3.2.0",  // Atualizei para evitar conflitos de dependências.
     "react-toastify": "^6.0.9",
-    "redux": "^4.0.0",
-    "redux-form": "^8.1.0",
+    "redux": "^4.0.5",  // Atualizei para evitar conflitos de dependências.
+    "redux-form": "^8.3.7",  // Atualizei para evitar conflitos de dependências.
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
-    "solidity": "^0.8.9"
+    "solidity": "0.8.9"  // Corrigi a versão do Solidity para uma versão estável.
   },
   "devDependencies": {
     "husky": "^4.2.5",
