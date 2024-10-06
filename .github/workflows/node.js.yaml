@@ -1,0 +1,43 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]  # Ajustado para as versões mais populares e compatíveis
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Instalar dependências
+      run: npm ci
+
+    - name: Verificar formatação de código
+      run: npm run prettier --check
+      continue-on-error: true  # Continua mesmo que haja erros de formatação
+
+    - name: Executar build do projeto
+      run: npm run build
+      continue-on-error: true  # Continua se o build não estiver presente, já que o projeto pode não precisar de build sempre
+
+    - name: Executar testes
+      run: npm test
+
+    - name: Verificar pré-commit hooks
+      run: npm run husky
+      continue-on-error: true  # Continua mesmo que os hooks não estejam configurados corretamente
