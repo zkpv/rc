@@ -28,7 +28,7 @@
     "redux-form": "^8.1.0",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
-    "solidity": "^0.8.4"
+    "solidity": "^0.8.9"
   },
   "devDependencies": {
     "husky": "^4.2.5",
