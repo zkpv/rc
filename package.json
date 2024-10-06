@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "author": {
-    "name": "Mohamed Shadab",
-    "url": "https://shadxx7.github.io"
+    "name": "Pessoa Jr",
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shadxx7/elections-frontend"
+    "url": "https://github.com/zkpv/poll"
   },
   "license": "MIT",
   "dependencies": {
